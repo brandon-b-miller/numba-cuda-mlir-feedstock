@@ -11,5 +11,8 @@ provider:
   linux_aarch64: default
   linux_64: default
   win_64: github_actions
+  # Native rather than cross-compiled from win_64: building MLIR runs
+  # mlir-tblgen, so the build host has to be able to execute what it produces.
+  win_arm64: github_actions
 workflow_settings:
   free_disk_space: quick
