@@ -66,8 +66,6 @@ requirements:
     - ninja
     - if: unix
       then: make
-    # Speeds up local debug builds for humans; conda-forge has no win-arm64
-    # build of it, and build.bat runs uncached there rather than failing.
     - if: not (win and arm64)
       then: sccache
   host:
